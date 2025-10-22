@@ -1,0 +1,19 @@
+@use '../../scss/variables' as *;
+@use '../../scss/reset';
+
+.categoryshelfheader-container {
+    
+    margin: 2.4rem;
+
+    display: flex;
+    align-items: center;
+    color: $primary-color;
+    text-align: center;
+
+    .categoryshelfheader-description{
+       
+        margin-bottom: 12px;
+    }
+
+    
+}

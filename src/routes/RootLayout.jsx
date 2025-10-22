@@ -2,6 +2,7 @@
 import { NavLink, Outlet } from "react-router";
 import Navbar from "../components/Navbar/Navbar";
 
+import './RootLayout.scss'
 export default function RootLayout() {
   return (
     <section className="app-shell">

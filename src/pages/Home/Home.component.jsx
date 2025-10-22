@@ -30,9 +30,9 @@ export default function Home() {
   return(
     <>
       <CategoriesExplorer  categories={categories}></CategoriesExplorer>
-      <CategoryShelf category="Recién agregados" description = "Explora esta sección para descubrir las últimas adiciones a nuestro catálogo" books={latestBooks}></CategoryShelf>
+      <CategoryShelf id={null} category="Recién agregados" description = "Explora esta sección para descubrir las últimas adiciones a nuestro catálogo" books={latestBooks}></CategoryShelf>
       {
-        categories.map((category) => ( <CategoryShelf key={category.id}  category={category.name} description={category.description} books={category.books}/>) )
+        categories.map((category) => ( <CategoryShelf key={category.id}  category={category.name} description={category.description} id={category.id} books={category.books}/>) )
       }
     </>
   )

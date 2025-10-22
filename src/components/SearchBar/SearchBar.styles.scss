@@ -1,0 +1,39 @@
+.search {
+    width: 25rem;
+} 
+
+.searchbarcontainer {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+}
+
+
+.search-results {
+  position: absolute;
+  top: 100%;
+  left: 0; right: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  max-height: 420px;
+  overflow: auto;
+  z-index: 10;
+}
+
+.search-item {
+  display: flex; gap: 8px; padding: 8px 10px; cursor: pointer;
+  &:hover { background: #f6f6f6; }
+  .thumb { width: 36px; height: 54px; object-fit: cover; flex: 0 0 36px; }
+  .meta { display: flex; flex-direction: column; }
+  .title { font-weight: 600; line-height: 1.2; }
+  .author { font-size: 0.9rem; opacity: 0.7; }
+}
+
+.search-empty { padding: 10px; color: #666; }
+
+.lupa {
+    height: 15px;
+    position: absolute;
+    right: 1.0rem;
+    top: 0.1rem;
+}

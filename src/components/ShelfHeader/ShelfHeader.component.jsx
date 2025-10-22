@@ -2,7 +2,7 @@ import CategoriesExplorer from '../CategoriesExplorerShelf/CategoriesExplorer.co
 import './ShelfHeader.styles.scss'
 import { Link } from 'react-router';
 
-const ShelfHeader = ({category,description}) => {
+const ShelfHeader = ({id,category,description, ...restProops}) => {
     
     return (
         <>
@@ -11,9 +11,11 @@ const ShelfHeader = ({category,description}) => {
                 <h2>{category}</h2>
                 <p>{description}</p>
             </div>
-            <div className='shelfheader-link'>
-                <Link>Ver todo </Link>
-            </div>
+            {id && (
+                <div className='shelfheader-link'>
+                    <Link to={`/category/${id}`}>Ver todo</Link>
+                </div>
+            )}
             
         </section>
             

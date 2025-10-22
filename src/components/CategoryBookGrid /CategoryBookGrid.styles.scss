@@ -1,0 +1,18 @@
+@use '../../scss/variables' as *;
+@use '../../scss/reset';
+
+.categorybookgrid-container {
+
+    width: 85%;
+    margin: 2.4rem;
+   
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 2.4rem;
+    column-gap: 2.4rem;
+    
+    
+    
+}

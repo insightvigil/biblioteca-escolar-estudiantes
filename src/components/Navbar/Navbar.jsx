@@ -1,5 +1,6 @@
 import CarticaturaLogo from '../../assets/Logo-Atitalaquia-Caricatura.png'
 import TecnmLogo from '../../assets/Logo-TECNM.png'
+import SearchBar from '../SearchBar/SearchBar.component';
 import './Navbar.styles.scss';
 
 const Navbar = () => {
@@ -16,7 +17,7 @@ const Navbar = () => {
       </a>
 
       <div className="nav-center">
-       {/* <SearchBar onSelect={handleSelect} placeholder="Buscar por título o autor…" />*/}
+       <SearchBar placeholder="Buscar por título o autor…" />
       </div>
 
       <nav className="links">

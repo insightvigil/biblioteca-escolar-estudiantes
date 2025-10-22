@@ -1,5 +1,6 @@
 html {
   font-size: 62.5%;
+  
 }
 
 * {
@@ -11,6 +12,7 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   min-height: 100vh;
   background-color: hsl(212, 32%, 5%);
   line-height: 1.5;

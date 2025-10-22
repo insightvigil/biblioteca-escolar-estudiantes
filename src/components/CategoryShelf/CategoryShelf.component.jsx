@@ -6,12 +6,12 @@ import { useState, useEffect } from "react";
 import './CategoryShelf.styles.scss'
 
 
-const CategoryShelf = ({category, description, books}) => {
+const CategoryShelf = ({category, description, books,id}) => {
 
     return (
         <>
         <section className="categoryshelf-container">
-        <ShelfHeader category={category} description = {description}></ShelfHeader>
+        <ShelfHeader category={category} description = {description} id={id}></ShelfHeader>
         <BookGrid books={books}></BookGrid>
         </section>
         </>
