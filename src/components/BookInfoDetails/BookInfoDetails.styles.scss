@@ -1,0 +1,28 @@
+@use '../../scss/variables' as *;
+@use '../../scss/reset';
+
+.details, .location {
+            h3{
+                color: $primary-color;
+                font-size: 1.8rem;
+            }
+
+            tr{ 
+                td{
+                font-size: 1.4rem;
+              
+                }
+
+                .title{
+                    width: 75px;
+                    font-weight: bold;
+                }
+
+                .data{
+                    color: hsl(0, 0%, 80%);
+                }
+
+                
+            }
+
+        }

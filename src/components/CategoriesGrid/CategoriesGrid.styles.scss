@@ -1,0 +1,36 @@
+@use '../../scss/variables' as *;
+@use '../../scss/reset';
+
+.categoriesexplorer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1200px;
+    margin-top: 24px;
+ 
+    
+    .category-btn {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 0.1px solid $secondary-color;
+        border-radius: 4px;
+        width: 155px;
+        height: 50px;
+        background-color: hsl(212, 32%, 8%);
+        transition: transform 0.3s ease;
+        
+       &:hover {
+        transform: scale(1.03);
+        cursor: pointer;
+    }
+    }
+
+    p{
+        text-align: center;
+        color:$primary-color;
+        font-size: 1.4rem;
+        font-weight: bold;
+    }
+}

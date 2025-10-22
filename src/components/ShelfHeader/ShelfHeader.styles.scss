@@ -1,0 +1,28 @@
+@use '../../scss/variables' as *;
+@use '../../scss/reset';
+
+.shelfheader-container {
+    
+    width:1200px;
+    display: flex;
+    align-items: center;
+    color: $primary-color;
+
+    .shelfheader-description{
+       
+        margin-bottom: 12px;
+    }
+
+    .shelfheader-link{
+        font-size: 1.2rem;
+        margin-left: auto;
+        margin-right: 12px;
+        a {
+            color: $primary-color;
+        &:hover {
+            color:  lightgray;
+        }
+        }
+        
+    }
+}

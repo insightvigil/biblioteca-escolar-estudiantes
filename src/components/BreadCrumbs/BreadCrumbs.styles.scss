@@ -1,0 +1,31 @@
+@use '../../scss/variables' as *;
+@use '../../scss/reset';
+
+.breadcrumbs-container {
+    margin: 12px auto;
+    color: $primary-color;
+    width: 1200px;
+    
+
+    .caracter {
+        color:$primary-color;
+    }
+
+    .linkatras{
+        color: $primary-color;
+        text-decoration: none;
+
+        .textosubrayado{
+            text-decoration: underline;
+        }
+    }
+    
+    .detailname {
+        color: $primary-color;
+    }
+
+
+
+
+
+}

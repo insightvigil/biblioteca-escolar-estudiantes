@@ -1,0 +1,51 @@
+@use '../../scss/variables' as *;
+@use '../../scss/reset';
+
+.navbar {
+    width: 100vw;
+    background: rgba(22,27,34,.9); backdrop-filter: blur(8px);
+    position: sticky; 
+    top: 0; 
+    z-index: 10;  
+    backdrop-filter: blur(8px); 
+    border-bottom: 1px solid #30363d;
+    
+    .brand {
+        
+        display:flex;
+        align-items: center;
+        font-weight: 700; 
+        letter-spacing: .5px;
+        text-decoration: none;
+        .logos {
+        img {
+            height:  50px;
+            margin: 0 10px;
+            }
+        }
+
+        span {
+            color: $primary-color;
+            font-size: 1.2rem;
+            a {
+                text-decoration: none;
+            }
+        }
+
+    }
+
+   .links {
+    a {
+        text-decoration: none;
+        font-size: 1.2rem;
+        margin: 10px;
+        color: $primary-color;
+    }
+   }
+
+    
+}
+
+
+
+.navbar .wrap { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: .75rem 1rem; max-width: 1200px; margin: 0 auto; }

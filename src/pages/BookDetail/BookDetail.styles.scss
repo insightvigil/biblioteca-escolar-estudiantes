@@ -1,0 +1,43 @@
+@use '../../scss/variables' as *;
+@use '../../scss/reset';
+
+
+
+
+
+
+
+.bookdetail-container {
+    margin: 24px auto;
+    color: $primary-color;
+    width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: 
+    "nav" "details";
+    justify-items: center;
+
+    .left-container{
+        figure{
+            img{
+                width: 300px;
+            }
+        }
+    }
+    .right-container{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: start;
+        .title-block{
+            h2{
+                font-size: 2.8rem;
+            }
+            h3 {
+                font-size: 2.2rem;
+                color: $secondary-color;
+            }
+        }
+            
+    }
+}

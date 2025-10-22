@@ -1,0 +1,14 @@
+@use '../../scss/variables' as *;
+@use '../../scss/reset';
+
+.bookgrid-container {
+   
+    border-radius: 8px;
+    width: 1200px;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    
+}
