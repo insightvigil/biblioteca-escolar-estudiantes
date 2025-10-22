@@ -16,7 +16,7 @@ export default function BookDetail() {
 
     return(
         <>
-            <BreadCrumbs book = {book}></BreadCrumbs>
+            <BreadCrumbs book = {book} id={id}></BreadCrumbs>
             <section className="bookdetail-container">
             <div className="left-container">      
                 <figure>

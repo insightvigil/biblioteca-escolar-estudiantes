@@ -5,8 +5,8 @@ import './BookCard.styles.scss'
 
 
 const BookCard = ({book}) => {
-    const {id, title, author, cover_url } = book
-    const isTitleGreater = title.length > 30
+    const {id, title, author, cover_url,stock } = book
+    const isTitleGreater = title.length > 20
     
     const hasComma = author.includes(',')
     
@@ -22,8 +22,10 @@ const BookCard = ({book}) => {
                 <figure>
                     <img src={cover_url} className="book-cover"/>
                     <figcaption className="book-description">
-                        <h3>{isTitleGreater ? title.slice(0,25) + "..." : title}</h3>
+                        <h3>{isTitleGreater ? title.slice(0,20) + "..." : title}</h3>
                         <p>{authorFormatted}</p>
+                        <p className='available'>Disponible</p>
+
                     </figcaption>
                 </figure>
             </section>

@@ -21,7 +21,9 @@
         padding: 12px;
         img {
             width: 100%;
+            min-height: 225px;
             max-height: 225px;
+            
             object-fit: cover;
         }
         figcaption {
@@ -34,6 +36,13 @@
             p {
                 font-size: 1.2rem;
                 color: $secondary-color;
+            }
+
+            .available {
+                padding: 15xp;
+                color: green;
+                font-weight: bold;
+                font-style: italic;
             }
         }
         

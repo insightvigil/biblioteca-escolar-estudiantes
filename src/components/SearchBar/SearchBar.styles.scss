@@ -1,5 +1,12 @@
+@use '../../scss/variables' as *;
+@use '../../scss/reset';
+
 .search {
     width: 25rem;
+    background: #e6edf3;
+    border-radius: 2px;
+    padding: 1px;
+    font-size: 1.2rem;
 } 
 
 .searchbarcontainer {
@@ -13,7 +20,7 @@
   position: absolute;
   top: 100%;
   left: 0; right: 0;
-  background: #fff;
+   background:whitesmoke;
   border: 1px solid #ddd;
   max-height: 420px;
   overflow: auto;
@@ -35,5 +42,5 @@
     height: 15px;
     position: absolute;
     right: 1.0rem;
-    top: 0.1rem;
+    top: 0.2rem;
 }

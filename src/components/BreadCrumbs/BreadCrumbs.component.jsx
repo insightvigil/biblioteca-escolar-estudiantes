@@ -1,8 +1,10 @@
 import { Link } from "react-router";
 
+
 import './BreadCrumbs.styles.scss'
-const BreadCrumbs = ({book}) => {
+const BreadCrumbs = ({book,id}) => {
     const {categoria,title} = book;
+    
     return (
         <div className='breadcrumbs-container'>
             
@@ -16,7 +18,7 @@ const BreadCrumbs = ({book}) => {
                 <span className="caracter">&gt;</span>
                 <Link className="detailname" to='/'>Libros</Link>
                 <span className="caracter">&gt;</span>
-                <Link className="detailname" to={`category/${book.category}`}>{categoria}</Link>
+                <Link className="detailname" to={`category/${id}`}>{categoria}</Link>
                 <span className="caracter">&gt;</span>
                 <span className='detailname'>{title}</span>
                 
