@@ -15,8 +15,8 @@ export default function Home() {
 
   useEffect(() => {
     Promise.all([
-      fetch("http://localhost:4000/api/v1/books/latest"),
-      fetch("http://localhost:4000/api/v1/books/categories/books-grid")
+      fetch("http://192.168.0.159:4000/api/v1/books/latest"),
+      fetch("http://192.168.0.159:4000/api/v1/books/categories/books-grid")
     ])
       .then(async ([res1, res2]) => {
         const data1 = await res1.json();

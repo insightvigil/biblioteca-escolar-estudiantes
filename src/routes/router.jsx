@@ -17,6 +17,7 @@ export const router = createBrowserRouter([
       { index: true, element: <Home/>},
       { path: "books/:id", element: <BookDetail/>},
       {path:"category/:id", element: <Category/>},
+      {path:"books/:id/category/:id", element: <Category/> }
       /*{ path: "libros", element: <BookGrid /> },
       { path: "libros/:id", element: <BookDetail />, loader: bookLoader },
       { path: "categorias/:catId/libros", element: <CategoryBooks />, loader: categoryLoader },

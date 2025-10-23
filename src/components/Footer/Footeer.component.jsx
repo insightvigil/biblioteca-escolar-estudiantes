@@ -4,9 +4,9 @@ const Footer = () => {
     return (
         <>
         
-        <footer class='footer'>
+        <footer className='footer'  title="#OrgullosamenteCenzontles">
             <figure>
-                <img src={icon} alt="" />
+                <img src={icon} alt=""/>
             </figure>
             <small>&copy; Instituto Tecnológico de Atitalaquia 2025</small>
         </footer>

@@ -7,8 +7,21 @@
     align-items: center;
     width: 1200px;
     margin-top: 24px;
- 
+    flex-direction: row;
+    color: $primary-color;
     
+    .nav-btn{
+        font-size: 2.4rem;
+        font-weight: bold;
+
+
+    }
+
+    .nav-btn:hover {
+        cursor: pointer;
+        user-select: none;
+    }
+   
     .category-btn {
         text-decoration: none;
         display: flex;
@@ -33,4 +46,11 @@
         font-size: 1.4rem;
         font-weight: bold;
     }
+
+    .categories-wrapper {
+        display: flex;
+        gap: 12px;
+    }
+
+    
 }

@@ -9,14 +9,14 @@ export default function BookDetail() {
     const [book, setBook] = useState([]);
 
     useEffect(()=> {
-    fetch(`http://localhost:4000/api/v1/books/${id}`)
+    fetch(`http://192.168.0.159:4000/api/v1/books/${id}`)
     .then((response) => response.json())
     .then((data) => setBook(data))   
-},[id])
+    },[id])
 
     return(
         <>
-            <BreadCrumbs book = {book} id={id}></BreadCrumbs>
+            <BreadCrumbs book = {book}></BreadCrumbs>
             <section className="bookdetail-container">
             <div className="left-container">      
                 <figure>

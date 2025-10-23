@@ -2,7 +2,9 @@
 @use '../../scss/reset';
 
 .breadcrumbs-container {
-    margin: 12px auto;
+
+    margin: 12px auto 0 auto;
+    
     color: $primary-color;
     width: 1200px;
     
