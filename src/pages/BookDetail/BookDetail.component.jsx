@@ -4,12 +4,14 @@ import BreadCrumbs from '../../components/BreadCrumbs/BreadCrumbs.component'
 import './BookDetail.styles.scss'
 import { useParams } from 'react-router'
 
+const API = import.meta.env.VITE_API_URL || 'http://192.168.137.74:4000/api/v1';
+
 export default function BookDetail() {
     const {id} =useParams();
     const [book, setBook] = useState([]);
 
     useEffect(()=> {
-    fetch(`http://192.168.0.159:4000/api/v1/books/${id}`)
+    fetch(`${API}/books/${id}`)
     .then((response) => response.json())
     .then((data) => setBook(data))   
     },[id])

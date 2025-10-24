@@ -6,6 +6,7 @@ import CategoriesExplorer from '../../components/CategoriesExplorerShelf/Categor
 
 import api from '../../services/api';
 
+const API = import.meta.env.VITE_API_URL || "http://192.168.0.159:4000/api/v1";
 
 export default function Home() {
 
@@ -15,8 +16,8 @@ export default function Home() {
 
   useEffect(() => {
     Promise.all([
-      fetch("http://192.168.0.159:4000/api/v1/books/latest"),
-      fetch("http://192.168.0.159:4000/api/v1/books/categories/books-grid")
+      fetch(`${API}/books/latest`),
+      fetch(`${API}/books/categories/books-grid`)
     ])
       .then(async ([res1, res2]) => {
         const data1 = await res1.json();

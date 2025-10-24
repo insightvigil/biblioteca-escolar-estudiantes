@@ -6,11 +6,13 @@ import CategoryBookGrid from '../../components/CategoryBookGrid /CategoryBookGri
 import BreadCrumbs from '../../components/BreadCrumbs/BreadCrumbs.component';
 import './Categories.styles.scss'
 
+const API = import.meta.env.VITE_API_URL || 'http://192.168.137.74:4000/api/v1';
+
 export default function Category() {
     const {id} =useParams();
     const [categoryBooks,setCategoryBooks] = useState({})
     useEffect(()=> {
-        fetch(`http://192.168.0.159:4000/api/v1/books/category/${id}`)
+        fetch(`${API}/books/category/${id}`)
         .then((response)=> response.json())
         .then((data)=>setCategoryBooks(data))
         .catch((err) => console.log(err));

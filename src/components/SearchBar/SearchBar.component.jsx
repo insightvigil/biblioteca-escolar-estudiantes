@@ -4,6 +4,7 @@ import lupaIcon from '../../assets/lupa.png'
 
 import './SearchBar.styles.scss';
 
+const API = import.meta.env.VITE_API_URL || "http://192.168.137.74:4000/api/v1";
 export default function SearchBar({ placeholder = 'Buscar…', minChars = 2, limit = 8 }) {
   const [term, setTerm] = useState('');
   const [results, setResults] = useState([]);
@@ -14,7 +15,7 @@ export default function SearchBar({ placeholder = 'Buscar…', minChars = 2, lim
     const t = setTimeout(() => {
       const q = term.trim();
       if (q.length >= minChars) {
-        fetch(`http://localhost:4000/api/v1/books/search?q=${encodeURIComponent(q)}&limit=${limit}`)
+        fetch(`${API}/books/search?q=${encodeURIComponent(q)}&limit=${limit}`)
           .then((r) => r.json())
           .then((data) => {
             setResults(data || []);
