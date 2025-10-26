@@ -1,14 +1,47 @@
 @use '../../scss/variables' as *;
 @use '../../scss/reset';
 
+/* Respeta tus proporciones y layout como en CategoriesGrid */
 .bookgrid-container {
-   
-    border-radius: 8px;
-    width: 1200px;
-    height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1200px;
+  margin-top: 24px;
+  flex-direction: row;
+  color: $primary-color;
+
+  /* Botones < y >: mismos tamaños/estética que CategoriesGrid,
+     encapsulados aquí para NO afectar a CategoriesGrid */
+  .nav-btn {
+    font-size: 2.4rem;
+    font-weight: bold;
+    user-select: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &[aria-disabled='true'] {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+
+  /* Contenedor de tarjetas de libros */
+  .books-wrapper {
     display: flex;
-    justify-content: space-evenly;
+    gap: 12px;
+    justify-content: space-evenly;   /* alineación como en categories */
     align-items: center;
-    
-    
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+}
+
+/* Opcional: responsivo como hiciste en otras rejillas */
+@media (max-width: 1280px) {
+  .bookgrid-container {
+    width: 100%;
+  }
 }

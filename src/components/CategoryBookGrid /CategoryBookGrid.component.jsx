@@ -1,18 +1,18 @@
 import './CategoryBookGrid.styles.scss';
 import BookCard from '../BookCard/BookCard';
-import { useEffect, useState } from 'react';
 
-const CategoryBookGrid = ({books}) => {
-   
-    return(
-        <>
-        <section className="categorybookgrid-container">
-            {books.map((book) => ( 
-                <BookCard key={book.id} book={book}></BookCard>
-            ))}
-            
-        </section>
-        </>
-    )
-}
+const CategoryBookGrid = ({ books = [] }) => {
+  return (
+    <section className="categorybookgrid-container">
+      {Array.isArray(books) && books.length > 0 ? (
+        books.map((book) => (
+          <BookCard key={book.id} book={book} />
+        ))
+      ) : (
+        <div className="categorybookgrid-empty">No hay libros para mostrar.</div>
+      )}
+    </section>
+  );
+};
+
 export default CategoryBookGrid;
