@@ -9,8 +9,14 @@
     z-index: 10;  
     backdrop-filter: blur(8px); 
     border-bottom: 1px solid #30363d;
-    
-    .brand {
+
+    .wrap{
+        display: flex;
+        justify-content: space-around;
+        align-items:center;
+
+
+        .brand {
         
         display:flex;
         align-items: center;
@@ -20,7 +26,7 @@
         .logos {
         img {
             height:  50px;
-            margin: 0 10px;
+            margin: 0.5rem 10px;
             }
         }
 
@@ -38,14 +44,18 @@
     a {
         text-decoration: none;
         font-size: 1.2rem;
-        margin: 10px;
+        margin: 1.2rem;
         color: $primary-color;
     }
    }
+    }
+    
+    
 
     
 }
 
 
 
-.navbar .wrap { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: .75rem 1rem; max-width: 1200px; margin: 0 auto; }
+/*.navbar .wrap { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: .75rem 1rem; max-width: 1200px; margin: 0 auto; }
+*/

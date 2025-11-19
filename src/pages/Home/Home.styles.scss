@@ -1,47 +1,8 @@
 @use '../../scss/variables' as *;
 @use '../../scss/reset';
 
-
-
-.home-pager {
-  width: 1200px;
-  margin: 16px auto 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  color: $primary-color;
-
-  .pager-btn {
-    min-width: 44px;
-    height: 36px;
-    padding: 0 12px;
-    border: 1px solid $secondary-color;
-    background: hsl(212, 32%, 8%);
-    color: $primary-color;
-    border-radius: 6px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: transform 0.2s ease, opacity 0.2s ease;
-
-    &:hover { transform: translateY(-1px); }
-    &:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
-    &.is-active { outline: 2px solid $primary-color; outline-offset: 0; }
-  }
-
-  .pager-list {
-    list-style: none;
-    display: flex;
-    gap: 8px;
-    margin: 0 4px;
-    padding: 0;
-    align-items: center;
-  }
-
-  .pager-ellipsis { padding: 0 4px; }
+.home-container {
+  width: 100vw;
+  min-height: 100vh;
 }
 
-@media (max-width: 1280px) {
-  .home-pager { width: 100%; padding: 0 12px; }
-}

@@ -5,7 +5,7 @@ import './Navbar.styles.scss';
 import { Link } from 'react-router';
 const Navbar = () => {
     return(
-        <header className="navbar">
+    <header className="navbar">
     <div className="wrap">
       <Link className="brand" to='/'> 
         <div className='logos'>
