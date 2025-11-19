@@ -6,7 +6,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1200px;
+  width: 90%;
   margin-top: 24px;
   flex-direction: row;
   color: $primary-color;
@@ -39,9 +39,3 @@
   }
 }
 
-/* Opcional: responsivo como hiciste en otras rejillas */
-@media (max-width: 1280px) {
-  .bookgrid-container {
-    width: 100%;
-  }
-}

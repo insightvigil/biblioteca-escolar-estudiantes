@@ -1,4 +1,4 @@
-import axios from 'axios';
+/*import axios from 'axios';
 
 const baseURL = import.meta.env.VITE_API_URL || 'http://192.168.1.108:4000/api/v1';
 const api = axios.create({ baseURL, timeout: 10000 });
@@ -15,3 +15,4 @@ export default api;
 
 
 
+*/

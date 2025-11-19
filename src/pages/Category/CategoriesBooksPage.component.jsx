@@ -3,8 +3,8 @@ import { useParams } from 'react-router';
 
 import CategoryShelfHeader from '../../components/CategoryShelfHeader/CategoryShelfHeader.component';
 import CategoryBookGrid from '../../components/CategoryBookGrid /CategoryBookGrid.component';
-import BreadCrumbs from '../../components/BreadCrumbs/BreadCrumbs.component';
-import './Categories.styles.scss';
+import BreadCrumbs from '../../components/navigation/BreadCrumbs/BreadCrumbs.component';
+import './CategoriesBooksPage.styles.scss';
 
 const API = import.meta.env.VITE_API_URL || 'http://192.168.137.74:4000/api/v1';
 

@@ -3,12 +3,12 @@
 
 
 
-
-
-
-
+.bookdetail-page{
+    
+    
 .bookdetail-container {
-    margin: 24px auto;
+    margin: 2.4rem auto;
+    padding: 1.2rem;
     color: $primary-color;
     width: 80%;
     min-height:75vh;
@@ -35,6 +35,7 @@
         }
     }
     .right-container{
+        
         position: relative;
        
         width: 100%;
@@ -54,3 +55,7 @@
             
     }
 }
+}
+
+
+

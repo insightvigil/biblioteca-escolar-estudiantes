@@ -1,4 +1,4 @@
-import icon from '../../assets/pajaro.png'
+import icon from '../../../assets/pajaro.png'
 import './Footer.styles.scss'
 const Footer = () => {
     return (

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router';
-import lupaIcon from '../../assets/lupa.png'
+import lupaIcon from '../../../assets/lupa.png'
 
 import './SearchBar.styles.scss';
 

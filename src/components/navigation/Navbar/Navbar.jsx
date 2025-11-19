@@ -1,5 +1,5 @@
-import CarticaturaLogo from '../../assets/Logo-Atitalaquia-Caricatura.png'
-import TecnmLogo from '../../assets/Logo-TECNM.png'
+import CarticaturaLogo from '../../../assets/Logo-Atitalaquia-Caricatura.png'
+import TecnmLogo from '../../../assets/Logo-TECNM.png'
 import SearchBar from '../SearchBar/SearchBar.component';
 import './Navbar.styles.scss';
 import { Link } from 'react-router';

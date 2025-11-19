@@ -1,0 +1,11 @@
+@use './../../../../scss/variables' as *;
+@use '../../../../scss/reset';
+
+.location {
+  margin-top: 16px;
+
+  h3 {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+  }
+}
