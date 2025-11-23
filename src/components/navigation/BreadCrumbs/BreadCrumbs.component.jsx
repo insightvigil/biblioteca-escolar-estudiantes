@@ -3,7 +3,7 @@ import "./BreadCrumbs.styles.scss";
 
 export default function BreadCrumbs({ book = {} }) {
   const navigate = useNavigate();
-  const { id: routeCatId } = useParams();
+  const { id: routeCatId } = useParams(); // ID que viene desde la URL
 
   const {
     category_id: bookCatId,
@@ -11,32 +11,37 @@ export default function BreadCrumbs({ book = {} }) {
     title,
   } = book || {};
 
-  const categoryId = bookCatId ?? routeCatId ?? null;
-  const categoryName = bookCategoryName || "Categoría";
   const isBookDetail = Boolean(title);
 
-  // Construimos los pasos según el contexto
+  // Si estás en un libro:
+  // 1. Si routeCatId existe → significa que vienes desde /category/:id
+  // 2. Si NO existe → NO hacer clic en categoría
+  const allowCategoryClick = !isBookDetail || Boolean(routeCatId);
+
+  const categoryId = bookCatId ?? routeCatId ?? null;
+  const categoryName = bookCategoryName || "Categoría";
+
   const steps = [
     { label: "Inicio", to: "/" },
+
     ...(isBookDetail ? [{ label: "Libros", to: "/" }] : []),
+
     ...(categoryId
-      ? [{ label: categoryName, to: `/category/${categoryId}` }]
+      ? [
+          {
+            label: categoryName,
+            to: allowCategoryClick ? `/category/${categoryId}` : null,
+          },
+        ]
       : []),
-    ...(isBookDetail ? [{ label: title, to: null }] : []), // último paso (activo) sin link
+
+    ...(isBookDetail ? [{ label: title, to: null }] : []),
   ];
 
-  // El índice actual es el último paso
   const current = steps.length - 1;
 
   return (
     <div className="breadcrumbs-container">
-      {/* Atrás */}
-      {/*<button className="linkatras" onClick={() => navigate(-1)} type="button">
-        <span className="caracter">&lt;</span>
-        <span className="textosubrayado">Atrás</span>
-      </button>*/}
-
-      {/* Breadcrumb estilizado */}
       <nav className="breadcrumb" aria-label="breadcrumb">
         {steps.map((s, i) =>
           s.to ? (

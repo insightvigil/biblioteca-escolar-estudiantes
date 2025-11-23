@@ -23,6 +23,7 @@ const Navbar = () => {
       <nav className="links">
         <Link to="/">Inicio</Link>
         <Link to="/reglamento">Reglamento</Link>
+        <Link to="https://elibro.net/es/lc/itatitalaquia/login_usuario/?next=/es/lc/itatitalaquia/inicio/">Libros Digitales</Link>
       </nav>
     </div>
   </header>
