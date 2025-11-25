@@ -1,4 +1,5 @@
-const API = import.meta.env.VITE_API_URL;
+// play-ground/src/features/categories/services/categoriesBooks.service.js (ejemplo)
+import { API } from "../../../config/api"; // ajusta ruta
 
 export async function getBooksByCategory(id) {
   const res = await fetch(`${API}/books/category/${id}`);

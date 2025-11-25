@@ -28,6 +28,6 @@ export const router = createBrowserRouter(
   ],
   {
     // Basename raíz, funciona en '/'
-    /*basename: "/"*/
+    basename: "/"
   }
 );

@@ -1,12 +1,17 @@
-import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router';
-import lupaIcon from '../../../assets/lupa.png'
+// play-ground/src/features/home/components/SearchBar/SearchBar.jsx
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router";
+import lupaIcon from "../../../assets/lupa.png";
 
-import './SearchBar.styles.scss';
+import "./SearchBar.styles.scss";
+import { API } from "../../../config/api"; // 👈 ajusta la ruta si tu config vive en otro lugar
 
-const API = import.meta.env.VITE_API_URL || "http://192.168.137.74:4000/api/v1";
-export default function SearchBar({ placeholder = 'Buscar…', minChars = 2, limit = 8 }) {
-  const [term, setTerm] = useState('');
+export default function SearchBar({
+  placeholder = "Buscar…",
+  minChars = 2,
+  limit = 8
+}) {
+  const [term, setTerm] = useState("");
   const [results, setResults] = useState([]);
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
@@ -15,7 +20,9 @@ export default function SearchBar({ placeholder = 'Buscar…', minChars = 2, lim
     const t = setTimeout(() => {
       const q = term.trim();
       if (q.length >= minChars) {
-        fetch(`${API}/books/search?q=${encodeURIComponent(q)}&limit=${limit}`)
+        fetch(
+          `${API}/books/search?q=${encodeURIComponent(q)}&limit=${limit}`
+        )
           .then((r) => r.json())
           .then((data) => {
             setResults(data || []);
@@ -36,13 +43,16 @@ export default function SearchBar({ placeholder = 'Buscar…', minChars = 2, lim
 
   const goToBook = (id) => {
     setOpen(false);
-    setTerm('');
+    setTerm("");
     setResults([]);
     navigate(`/books/${id}`);
   };
 
   return (
-    <div className="searchbarcontainer" onBlur={() => setTimeout(() => setOpen(false), 150)}>
+    <div
+      className="searchbarcontainer"
+      onBlur={() => setTimeout(() => setOpen(false), 150)}
+    >
       <img className="lupa" src={lupaIcon} alt="" />
       <input
         className="search"
@@ -53,12 +63,15 @@ export default function SearchBar({ placeholder = 'Buscar…', minChars = 2, lim
         onChange={(e) => setTerm(e.target.value)}
         autoComplete="off"
       />
-      
 
       {open && results.length > 0 && (
         <div className="search-results">
           {results.map((b) => (
-            <div key={b.id} className="search-item" onMouseDown={() => goToBook(b.id)}>
+            <div
+              key={b.id}
+              className="search-item"
+              onMouseDown={() => goToBook(b.id)}
+            >
               <img src={b.cover_url} alt={b.title} className="thumb" />
               <div className="meta">
                 <p className="title">{b.title}</p>
@@ -69,11 +82,13 @@ export default function SearchBar({ placeholder = 'Buscar…', minChars = 2, lim
         </div>
       )}
 
-      {open && results.length === 0 && term.trim().length >= minChars && (
-        <div className="search-results">
-          <div className="search-empty">Sin coincidencias</div>
-        </div>
-      )}
+      {open &&
+        results.length === 0 &&
+        term.trim().length >= minChars && (
+          <div className="search-results">
+            <div className="search-empty">Sin coincidencias</div>
+          </div>
+        )}
     </div>
   );
 }
