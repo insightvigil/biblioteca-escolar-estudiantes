@@ -1,46 +1,112 @@
 @use '../../../scss/variables' as *;
 @use '../../../scss/reset';
 
+/* INPUT */
 .search {
-    width: 25rem;
-    background: #e6edf3;
-    border-radius: 2px;
-    padding: 1px;
+    width: 33rem;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 8px;
+    padding: 4px;
     font-size: 1.2rem;
-} 
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #9ca3af; 
 
+    &:focus{
+      outline:none;
+      background: lighter(rgba(255, 255, 255, 0.12),5%);
+    }
+
+    &:hover { 
+     
+  }
+}
+
+/* SOLO CUANDO HAY RESULTADOS (open=true) */
+.search.open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: none;
+}
+
+/* PLACEHOLDER */
+input::placeholder {
+  color: #9ca3af;
+  opacity: 1;
+}
+
+/* CONTENEDOR */
 .searchbarcontainer {
   position: relative;
   width: 100%;
   max-width: 640px;
 }
 
-
+/* DROPDOWN */
 .search-results {
+  width: 100%;
   position: absolute;
-  top: 100%;
-  left: 0; right: 0;
-   background:whitesmoke;
-  border: 1px solid #ddd;
+  top: calc(100% + 1px); /* se conecta perfect */
+  left: 0; 
+  right: 0;
+  overflow-y: hidden;
   max-height: 420px;
-  overflow: auto;
+  border-top: none;
   z-index: 10;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-top: none;
+
+  background: #33363d;
+  backdrop-filter: blur(12px);
+  
+  color: #f1f5f9; 
 }
 
+/* ITEM */
 .search-item {
-  display: flex; gap: 8px; padding: 8px 10px; cursor: pointer;
-  &:hover { background: #f6f6f6; }
-  .thumb { width: 36px; height: 54px; object-fit: cover; flex: 0 0 36px; }
-  .meta { display: flex; flex-direction: column; }
-  .title { font-weight: 600; line-height: 1.2; }
-  .author { font-size: 0.9rem; opacity: 0.7; }
+  display: flex;
+  gap: 8px;
+  padding: 8px 10px;
+  cursor: pointer;
+
+  &:hover { 
+    background: rgba(255, 255, 255, 0.06); 
+  }
+
+  .thumb { 
+    width: 36px; 
+    height: 54px; 
+    object-fit: cover; 
+    flex: 0 0 36px; 
+  }
+
+  .meta { 
+    display: flex; 
+    flex-direction: column; 
+  }
+
+  .title { 
+    font-weight: 600; 
+    line-height: 1.2; 
+  }
+
+  .author { 
+    font-size: 0.9rem; 
+    opacity: 0.7; 
+  }
 }
 
-.search-empty { padding: 10px; color: #666; }
+/* VACÍO */
+.search-empty { 
+  padding: 10px; 
+  color: $secondary-color; 
+}
 
+/* LUPA */
 .lupa {
     height: 15px;
     position: absolute;
-    right: 1.5rem;
-    top: 0.2rem;
+    right: 2.5rem;
+    top: 0.3rem;
+    z-index: 11;
 }

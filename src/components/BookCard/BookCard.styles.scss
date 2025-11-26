@@ -10,7 +10,7 @@
     transition: all 0.3s ease;
     background-color: hsl(212, 32%, 8%);
     border: 1px solid rgb(126, 129, 134, 0.2);;
-    
+    border-radius: 8px;
     &:hover {
         transform: scale(1.05);
         box-shadow: 0 4px 12px rgb(11, 15, 20, 0.2);

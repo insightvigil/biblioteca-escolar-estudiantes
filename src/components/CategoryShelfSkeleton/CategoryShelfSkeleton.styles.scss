@@ -1,0 +1,122 @@
+// src/components/CategoryShelf/CategoryShelfSkeleton.styles.scss
+@use '../../scss/variables' as *;
+@use '../../scss/mixins' as *;
+
+
+.categoryshelf-container--skeleton {
+  width: 100%;
+}
+
+
+.categoryshelf-header--skeleton {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 24px;
+  margin-bottom: 1rem;
+}
+
+
+.categoryshelf-skeleton-row {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Flechitas laterales */
+.skeleton-arrow {
+  width: 32px;
+  height: 64px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.4rem;
+  background: rgba(255, 255, 255, 0.06);
+  color: #9ca3af;
+  user-select: none;
+}
+
+.skeleton-arrow--left {
+  padding-right: 2px;
+}
+
+.skeleton-arrow--right {
+  padding-left: 2px;
+}
+
+/* Contenedor de tarjetas en fila */
+.categoryshelf-skeleton-cards {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+
+.skeleton-card {
+  flex: 0 0 180px; 
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+
+
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background: #1f2933; 
+  border-radius: 0.8rem;
+}
+
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0)
+  );
+  animation: skeleton-shimmer 1.3s infinite;
+}
+
+@keyframes skeleton-shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Partes específicas */
+.skeleton-title {
+  width: 260px;
+  height: 24px;
+  margin-bottom: 0.5rem;
+}
+
+.skeleton-subtitle {
+  width: 340px;
+  max-width: 100%;
+  height: 14px;
+}
+
+.skeleton-cover {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: 1rem;
+}
+
+.skeleton-line {
+  height: 10px;
+  border-radius: 999px;
+}
+
+.skeleton-line--short {
+  width: 70%;
+}

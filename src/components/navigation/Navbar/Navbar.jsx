@@ -13,7 +13,7 @@ const Navbar = () => {
           
           <img src={CarticaturaLogo} alt="Logo Itat" />
         </div>
-        <span> ¡Bienvenido a la Biblioteca Digital! </span>
+        <span> ¡Bienvenido al Catálogo Digital! </span>
       </Link>
 
       <div className="nav-center">
@@ -22,8 +22,12 @@ const Navbar = () => {
 
       <nav className="links">
         <Link to="/">Inicio</Link>
-        <Link to="/reglamento">Reglamento</Link>
         <Link to="https://elibro.net/es/lc/itatitalaquia/login_usuario/?next=/es/lc/itatitalaquia/inicio/">Libros Digitales</Link>
+        <Link to="https://cursos.itatitalaquia.edu.mx/">Moodle</Link>
+        <Link to="/reglamento">Reglamento</Link>
+        <Link to="http://201.132.29.146/">SII</Link>
+        
+        
       </nav>
     </div>
   </header>

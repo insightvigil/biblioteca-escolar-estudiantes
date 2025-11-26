@@ -21,13 +21,13 @@ export const router = createBrowserRouter(
         // Categorías
         { path: "category/:id", element: <CategoryBooksPage /> },
 
-        // (Probablemente esta ruta estaba mal formada, la dejo igual si tú lo deseas)
+     
         { path: "books/:bookId/category/:id", element: <CategoryBooksPage /> }
       ],
     },
   ],
   {
-    // Basename raíz, funciona en '/'
+   
     basename: "/"
   }
 );

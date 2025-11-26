@@ -14,8 +14,8 @@
 
 .bookdetail-table {
   width: 100%;
-  border-spacing: 6px;   // espacio horizontal y vertical
-  table-layout: fixed;        // evita que el contenido deforme las columnas
+  border-spacing: 6px;   
+  table-layout: fixed;       
   font-size: 1.2rem;
 
   td {
@@ -27,14 +27,13 @@
     font-weight: 700;
     
     color: $secondary-color;
-    width: 180px;             // MISMO ancho para la primera columna en las 2 tablas
-    text-align: left;
+    width: 180px;            
     white-space: nowrap;
   }
 
   .data {
     
     color: $primary-color;
-    text-align: left;         // fuerza alineación a la izquierda (evita que el 3 se vaya a la orilla)
+    text-align: left;       
   }
 }

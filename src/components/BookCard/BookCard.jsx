@@ -11,7 +11,6 @@ const BookCard = ({ book = {} }) => {
     available
   } = book;
 
-  // Disponibilidad: usa 'available' si es booleano; si no, evalúa stock > 0; si no hay dato, asume disponible.
   const isAvailable = typeof available === 'boolean'
     ? available
     : (typeof stock === 'number' ? stock > 0 : true);
@@ -28,7 +27,7 @@ const BookCard = ({ book = {} }) => {
     </p>
   );
 
-  // Si por alguna razón no hay id, evitamos link roto
+  
   const content = (
     <section className="bookcard-container">
       <figure>

@@ -6,3 +6,61 @@
   min-height: 100vh;
 }
 
+/* Mensaje de error */
+.home-error {
+  padding: 1rem 1.5rem;
+  color: $danger-color;
+  font-size: 0.95rem;
+}
+
+/* Skeleton sencillo para el CategoriesExplorer */
+.categories-explorer-skeleton {
+  padding: 1.5rem;
+}
+
+.skeleton-bar {
+  height: 20px;
+  width: 220px;
+  border-radius: 999px;
+  background: #e5e7eb;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0.8rem;
+}
+
+.skeleton-tags {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tag-skeleton {
+  display: inline-block;
+  height: 28px;
+  width: 80px;
+  border-radius: 999px;
+  background: #e5e7eb;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Reaprovechamos el shimmer del skeleton */
+.skeleton-bar::after,
+.tag-skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0)
+  );
+  animation: skeleton-shimmer 1.4s infinite;
+}
+
+@keyframes skeleton-shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}

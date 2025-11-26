@@ -5,7 +5,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1200px;
+    width: 90%;
     margin-top: 24px;
     flex-direction: row;
     color: $primary-color;
@@ -28,15 +28,17 @@
         align-items: center;
         justify-content: center;
         border: 0.1px solid $secondary-color;
-        border-radius: 4px;
+        border-radius: 8px;
         width: 155px;
         height: 50px;
         background-color: hsl(212, 32%, 8%);
         transition: transform 0.3s ease;
         
        &:hover {
+        background-color: darken($tec-color,10%);    
         transform: scale(1.03);
         cursor: pointer;
+          
     }
     }
 

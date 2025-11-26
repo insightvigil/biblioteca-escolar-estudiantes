@@ -1,10 +1,9 @@
-// play-ground/src/features/home/components/SearchBar/SearchBar.jsx
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
-import lupaIcon from "../../../assets/lupa.png";
+import lupaIcon from "../../../assets/lupa-white.png";
 
 import "./SearchBar.styles.scss";
-import { API } from "../../../config/api"; // 👈 ajusta la ruta si tu config vive en otro lugar
+import { API } from "../../../config/api";
 
 export default function SearchBar({
   placeholder = "Buscar…",
@@ -36,7 +35,7 @@ export default function SearchBar({
         setResults([]);
         setOpen(false);
       }
-    }, 300); // debounce 300ms
+    }, 300); 
 
     return () => clearTimeout(t);
   }, [term, minChars, limit]);
@@ -55,7 +54,7 @@ export default function SearchBar({
     >
       <img className="lupa" src={lupaIcon} alt="" />
       <input
-        className="search"
+        className={`search ${open ? "open" : ""}`}
         type="search"
         name="search"
         placeholder={placeholder}

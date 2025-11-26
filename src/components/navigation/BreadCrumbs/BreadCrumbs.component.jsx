@@ -3,7 +3,7 @@ import "./BreadCrumbs.styles.scss";
 
 export default function BreadCrumbs({ book = {} }) {
   const navigate = useNavigate();
-  const { id: routeCatId } = useParams(); // ID que viene desde la URL
+  const { id: routeCatId } = useParams(); 
 
   const {
     category_id: bookCatId,
@@ -13,9 +13,6 @@ export default function BreadCrumbs({ book = {} }) {
 
   const isBookDetail = Boolean(title);
 
-  // Si estás en un libro:
-  // 1. Si routeCatId existe → significa que vienes desde /category/:id
-  // 2. Si NO existe → NO hacer clic en categoría
   const allowCategoryClick = !isBookDetail || Boolean(routeCatId);
 
   const categoryId = bookCatId ?? routeCatId ?? null;

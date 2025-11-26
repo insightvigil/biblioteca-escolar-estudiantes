@@ -1,5 +1,5 @@
 // play-ground/src/features/categories/services/categoriesBooks.service.js (ejemplo)
-import { API } from "../../../config/api"; // ajusta ruta
+import { API } from "../../../config/api"; 
 
 export async function getBooksByCategory(id) {
   const res = await fetch(`${API}/books/category/${id}`);

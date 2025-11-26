@@ -1,4 +1,4 @@
-import icon from '../../../assets/pajaro.png'
+import icon from '../../../assets/cenzontle.png'
 import './Footer.styles.scss'
 const Footer = () => {
     return (
@@ -9,6 +9,8 @@ const Footer = () => {
                 <img src={icon} alt=""/>
             </figure>
             <small>&copy; Instituto Tecnológico de Atitalaquia 2025</small>
+            <small className='brand-profile'> Desarrollado por <a href="https://github.com/insightvigil" ><i class="fa-brands fa-github"></i> Adrián Vigil</a> </small>
+            
         </footer>
         </>
     )

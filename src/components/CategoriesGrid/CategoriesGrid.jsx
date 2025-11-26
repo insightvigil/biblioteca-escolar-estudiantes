@@ -4,7 +4,7 @@ import { useState } from 'react';
 const CategoriesGrid = ({categories = []}) => {
 
   const [startIndex, setStartIndex] = useState(0);
-  const step = 7; // cuántos mostrar por "pantalla"
+  const step = 7; 
 
   const handlePrev = () => {
     setStartIndex((prev) => Math.max(0, prev - step));

@@ -5,7 +5,7 @@ export function useSettings() {
   const [settings, setSettings] = useState(null);
 
   useEffect(() => {
-    fetch("settings.json") // se resuelve a /admin/settings.json en producción
+    fetch("settings.json") 
       .then(res => res.json())
       .then(setSettings)
       .catch(() => setSettings(null));

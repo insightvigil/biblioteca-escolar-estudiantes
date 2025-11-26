@@ -1,12 +1,10 @@
 import './BooksFilter.styles.scss';
 
 export default function BooksFilter({ sort, order, available, onChange }) {
-  // Opciones de “Order por” según tus campos reales
   const sortOptions = [
     { value: 'created_at', label: 'Recientes' },
     { value: 'title',      label: 'Título' },
     { value: 'author',     label: 'Autor' }
-    // { value: 'year',    label: 'Año' }, // opcional si lo necesitas
   ];
 
   return (
