@@ -23,7 +23,7 @@
 
 
 
-/* BreadCrumbs.styles.scss */
+
 
 .breadcrumbs-container {
   display: flex;
@@ -34,7 +34,7 @@
   padding: 1rem 2rem;
 }
 
-/* ---- Botón Atrás ---- */
+
 .linkatras {
   display: inline-flex;
   align-items: center;
@@ -60,9 +60,9 @@
     color: #c2185b;
   }
 }
-/* BreadCrumbs.styles.scss */
 
-/* 🎨 Variables SCSS */
+
+
 $breadcrumb-color-main:hsl(212, 32%, 8%);    
 $breadcrumb-bg: #ffffff;           
 $breadcrumb-hover: darken($tec-color,10%);         
@@ -78,7 +78,7 @@ $breadcrumb-shadow: rgba(0, 0, 0, 0.25);
   padding: 1rem 2rem;
 }
 
-/* ---- Botón Atrás ---- */
+
 .linkatras {
   display: inline-flex;
   align-items: center;
@@ -106,7 +106,6 @@ $breadcrumb-shadow: rgba(0, 0, 0, 0.25);
   }
 }
 
-/* ------------------------- Breadcrumb principal ------------------------- */
 .breadcrumb {
   display: inline-block;
   text-align: center;
@@ -147,7 +146,7 @@ $breadcrumb-shadow: rgba(0, 0, 0, 0.25);
       }
     }
 
-    /* 🔵 Círculo numerado */
+
     &::before {
       content: counter(flag);
       counter-increment: flag;
@@ -164,7 +163,7 @@ $breadcrumb-shadow: rgba(0, 0, 0, 0.25);
       box-shadow: 0 0 0 1px $breadcrumb-color-main;
     }
 
-    /* 🔺 Flecha hacia la derecha */
+
     &::after {
       content: '';
       position: absolute;
@@ -180,7 +179,7 @@ $breadcrumb-shadow: rgba(0, 0, 0, 0.25);
       box-shadow: 2px -2px 0 2px $breadcrumb-arrow;
     }
 
-    /* 🟣 Paso activo */
+  
     &--active {
       color: $breadcrumb-bg;
       background: $breadcrumb-color-main;
@@ -194,7 +193,7 @@ $breadcrumb-shadow: rgba(0, 0, 0, 0.25);
       }
     }
 
-    /* 💫 Hover */
+    
     &:hover {
       color: $breadcrumb-bg;
       background: $breadcrumb-hover;
@@ -210,7 +209,7 @@ $breadcrumb-shadow: rgba(0, 0, 0, 0.25);
   }
 }
 
-/* 📱 Responsivo */
+
 @media (max-width: 600px) {
   .breadcrumbs-container {
     align-items: stretch;

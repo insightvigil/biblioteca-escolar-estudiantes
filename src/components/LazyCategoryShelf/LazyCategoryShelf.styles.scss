@@ -2,8 +2,7 @@
 @use '../../scss/variables' as *;
 
 .lazy-shelf-anim {
-  /* NO cambiamos flex / grid ni width del CategoryShelf,
-     sólo animamos la entrada */
+  
   animation: lazy-shelf-fade-in 0.45s ease-out;
 }
 

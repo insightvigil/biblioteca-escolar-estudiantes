@@ -1,7 +1,7 @@
 @use '../../../scss/variables' as *;
 @use '../../../scss/reset';
 
-/* INPUT */
+
 .search {
     width: 33rem;
     background: rgba(255, 255, 255, 0.12);
@@ -22,31 +22,31 @@
   }
 }
 
-/* SOLO CUANDO HAY RESULTADOS (open=true) */
+
 .search.open {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   border-bottom: none;
 }
 
-/* PLACEHOLDER */
+
 input::placeholder {
   color: #9ca3af;
   opacity: 1;
 }
 
-/* CONTENEDOR */
+
 .searchbarcontainer {
   position: relative;
   width: 100%;
   max-width: 640px;
 }
 
-/* DROPDOWN */
+
 .search-results {
   width: 100%;
   position: absolute;
-  top: calc(100% + 1px); /* se conecta perfect */
+  top: calc(100% + 1px); 
   left: 0; 
   right: 0;
   overflow-y: hidden;
@@ -62,7 +62,7 @@ input::placeholder {
   color: #f1f5f9; 
 }
 
-/* ITEM */
+
 .search-item {
   display: flex;
   gap: 8px;
@@ -96,13 +96,13 @@ input::placeholder {
   }
 }
 
-/* VACÍO */
+
 .search-empty { 
   padding: 10px; 
   color: $secondary-color; 
 }
 
-/* LUPA */
+
 .lupa {
     height: 15px;
     position: absolute;

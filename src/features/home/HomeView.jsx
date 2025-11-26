@@ -94,7 +94,6 @@ export default function HomeView() {
         />
       )}
 
-      {/* Categorías por shelf: solo renderizamos hasta visibleLimit */}
       {visibleCategories.map((category, index) => (
         <LazyCategoryShelf
           key={category.id}
@@ -106,7 +105,7 @@ export default function HomeView() {
         />
       ))}
 
-      {/* Sentinel: sólo aparece si todavía quedan categorías por cargar */}
+      
       {visibleLimit < categories.length && (
         <div ref={loadMoreRef} style={{ height: "40px" }} />
       )}
