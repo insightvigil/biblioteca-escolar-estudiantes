@@ -5,6 +5,7 @@
 
 .categoryshelf-container--skeleton {
   width: 100%;
+ 
 }
 
 
@@ -13,6 +14,7 @@
   max-width: 1200px;
   padding: 0 24px;
   margin-bottom: 1rem;
+  
 }
 
 
@@ -23,9 +25,10 @@
   display: flex;
   align-items: center;
   gap: 1.5rem;
+   
 }
 
-/* Flechitas laterales */
+
 .skeleton-arrow {
   width: 32px;
   height: 64px;
@@ -48,7 +51,7 @@
   padding-left: 2px;
 }
 
-/* Contenedor de tarjetas en fila */
+
 .categoryshelf-skeleton-cards {
   flex: 1;
   display: flex;
@@ -71,6 +74,7 @@
   overflow: hidden;
   background: #1f2933; 
   border-radius: 0.8rem;
+   
 }
 
 .skeleton::after {
@@ -93,11 +97,12 @@
   }
 }
 
-/* Partes específicas */
+
 .skeleton-title {
   width: 260px;
   height: 24px;
   margin-bottom: 0.5rem;
+   
 }
 
 .skeleton-subtitle {
@@ -115,6 +120,7 @@
 .skeleton-line {
   height: 10px;
   border-radius: 999px;
+  
 }
 
 .skeleton-line--short {

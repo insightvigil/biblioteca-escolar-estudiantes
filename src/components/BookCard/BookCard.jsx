@@ -17,9 +17,11 @@ const BookCard = ({ book = {} }) => {
 
   const isTitleLong = (title || '').length > 20;
 
+
   const authorText = typeof author === 'string' && author.length > 0
     ? (author.includes(',') ? author.split(',')[0] : author)
     : 'Autor desconocido';
+  const isAuthorLong = (authorText || '').length > 20; 
 
   const Availability = () => (
     <p className={isAvailable ? 'available' : 'unavailable'}>
@@ -39,7 +41,7 @@ const BookCard = ({ book = {} }) => {
         />
         <figcaption className="book-description">
           <h3>{isTitleLong ? `${title.slice(0, 20)}…` : title}</h3>
-          <p>{authorText}</p>
+          <p>{isAuthorLong ? `${authorText.slice(0, 20)}…` : authorText}</p>
           <Availability />
         </figcaption>
       </figure>

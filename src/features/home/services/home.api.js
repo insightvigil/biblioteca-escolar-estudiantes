@@ -1,5 +1,5 @@
 // play-ground/src/features/home/services/home.service.js (ejemplo)
-import { API } from "../../../config/api"; // ajusta ruta
+import { API } from "../../../config/api"; 
 
 export async function getLatestBooks() {
   const res = await fetch(`${API}/books/latest`);

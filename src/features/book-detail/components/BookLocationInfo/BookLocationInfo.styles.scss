@@ -2,10 +2,15 @@
 @use '../../../../scss/reset';
 
 .location {
-  margin-top: 16px;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
 
   h3 {
     font-size: 1.8rem;
     margin-bottom: 12px;
+    letter-spacing: 0.02em;
   }
+
+  
 }

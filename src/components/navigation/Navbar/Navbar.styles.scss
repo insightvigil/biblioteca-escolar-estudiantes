@@ -46,6 +46,16 @@
         font-size: 1.4rem;
         margin: 1.2rem;
         color: $primary-color;
+        transition: all 0.3s ease;
+    }
+
+    a:hover {
+       
+        text-decoration: underline;
+    }
+
+    a:active {
+        color: rgba(255, 255, 255, 0.6);
     }
    }
     }

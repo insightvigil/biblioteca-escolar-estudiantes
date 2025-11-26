@@ -15,7 +15,7 @@ export default function LazyCategoryShelf({
   const [showReal, setShowReal] = useState(false);
   const containerRef = useRef(null);
 
-  // 1) Observa cuándo el shelf se acerca al viewport
+
   useEffect(() => {
     const node = containerRef.current;
     if (!node) return;
@@ -31,7 +31,7 @@ export default function LazyCategoryShelf({
       },
       {
         root: null,
-        rootMargin: "600px", // 👈 se activa MUCHO antes de que sea visible
+        rootMargin: "600px", 
         threshold: 0.01,
       }
     );
@@ -40,7 +40,7 @@ export default function LazyCategoryShelf({
     return () => observer.disconnect();
   }, []);
 
-  // 2) En cuanto se activa, pre-cargamos las portadas
+  
   useEffect(() => {
     if (!hasIntersected) return;
 
@@ -50,11 +50,10 @@ export default function LazyCategoryShelf({
 
     urls.forEach((url) => {
       const img = new Image();
-      img.src = url;  // 👈 dispara la descarga ANTES de mostrar el BookCard
+      img.src = url;  
     });
   }, [hasIntersected, books]);
 
-  // 3) Pequeño delay para simular carga antes de quitar el skeleton
   useEffect(() => {
     if (!hasIntersected) return;
     const t = setTimeout(() => setShowReal(true), delayMs);

@@ -3,13 +3,15 @@
 
 .link {
     text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 8px;
 }
 .bookcard-container {
     width: 200px;
     height: 300px;
     transition: all 0.3s ease;
-    background-color: hsl(212, 32%, 8%);
-    border: 1px solid rgb(126, 129, 134, 0.2);;
+    background-color: rgba(15, 23, 27,0.45);
+    border: 1px solid rgb(255, 255, 255, 0.18);;
     border-radius: 8px;
     &:hover {
         transform: scale(1.05);
@@ -19,6 +21,7 @@
     
     figure {
         padding: 12px;
+        
         img {
             width: 100%;
             min-height: 225px;

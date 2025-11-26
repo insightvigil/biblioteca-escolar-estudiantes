@@ -11,7 +11,7 @@ import LazyCategoryShelf from "../../components/LazyCategoryShelf/LazyCategorySh
 import { useHomeData } from "./hooks/useHomeData";
 import "./HomeView.styles.scss";
 
-const CATEGORY_CHUNK = 3; // cuántas categorías mostrar de golpe
+const CATEGORY_CHUNK = 3; 
 
 export default function HomeView() {
   const {
@@ -22,16 +22,14 @@ export default function HomeView() {
     error
   } = useHomeData();
 
-  // límite de categorías actualmente montadas en el DOM
+  
   const [visibleLimit, setVisibleLimit] = useState(CATEGORY_CHUNK);
   const loadMoreRef = useRef(null);
 
-  // cuando cambie la lista de categorías (nueva carga), reseteamos el límite
   useEffect(() => {
     setVisibleLimit(CATEGORY_CHUNK);
   }, [categories]);
 
-  // IntersectionObserver para ir agregando más categorías al llegar al final
   useEffect(() => {
     const node = loadMoreRef.current;
     if (!node) return;

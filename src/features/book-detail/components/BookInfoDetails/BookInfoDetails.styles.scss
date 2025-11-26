@@ -1,39 +1,67 @@
-@use './../../../../scss/variables'as *;
+@use './../../../../scss/variables' as *;
 @use '../../../../scss/reset';
 
-
-
 .details {
-  margin-top: 16px;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
 
   h3 {
     font-size: 1.8rem;
     margin-bottom: 12px;
+    letter-spacing: 0.02em;
   }
 }
 
 .bookdetail-table {
   width: 100%;
-  border-spacing: 6px;   
-  table-layout: fixed;       
+  border-collapse: separate;
+  border-spacing: 0 4px;      
+  table-layout: fixed;
   font-size: 1.2rem;
+
+  tr {
+    transition: background 0.18s ease;
+  }
+
+ 
+  tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+    
+  }
 
   td {
     padding: 4px 0;
-    vertical-align: top;
+    vertical-align: center;
   }
 
   .title {
     font-weight: 700;
-    
+    font-size: 1.4rem;
     color: $secondary-color;
-    width: 180px;            
+    width: 180px;
     white-space: nowrap;
+    padding-right: 12px;
+    vertical-align: center;
   }
 
   .data {
     
     color: $primary-color;
-    text-align: left;       
+    text-align: left;
+    opacity: 0.9;
+    word-wrap: break-word;
+
+    padding: 2px 8px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  
+  tr:nth-last-child(-n + 2) .data {
+    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo,
+      Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 1.1rem;
+    letter-spacing: 0.03em;
   }
 }

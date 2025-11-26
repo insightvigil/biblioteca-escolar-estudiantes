@@ -24,8 +24,9 @@ const Navbar = () => {
         <Link to="/">Inicio</Link>
         <Link to="https://elibro.net/es/lc/itatitalaquia/login_usuario/?next=/es/lc/itatitalaquia/inicio/">Libros Digitales</Link>
         <Link to="https://cursos.itatitalaquia.edu.mx/">Moodle</Link>
-        <Link to="/reglamento">Reglamento</Link>
         <Link to="http://201.132.29.146/">SII</Link>
+        <Link to="/reglamento">Reglamento</Link>
+        
         
         
       </nav>

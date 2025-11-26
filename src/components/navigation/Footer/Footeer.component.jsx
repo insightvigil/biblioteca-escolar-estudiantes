@@ -9,7 +9,7 @@ const Footer = () => {
                 <img src={icon} alt=""/>
             </figure>
             <small>&copy; Instituto Tecnológico de Atitalaquia 2025</small>
-            <small className='brand-profile'> Desarrollado por <a href="https://github.com/insightvigil" ><i class="fa-brands fa-github"></i> Adrián Vigil</a> </small>
+            <small className='brand-profile'> Desarrollado por <a href="https://github.com/insightvigil" title="#NeverStopLearning" ><i class="fa-brands fa-github"></i> Adrián Vigil</a> </small>
             
         </footer>
         </>
